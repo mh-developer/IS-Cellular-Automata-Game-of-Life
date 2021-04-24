@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>1D celični avtomat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.9/pixi.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/victor/1.1.0/victor.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+        <style>
+            html,
+            body {
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+
+            #wrapper {
+                margin: 0 auto;
+                width: 800px;
+                height: 600px;
+            }
+
+            #wrapper canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            #controls {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 999;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper"></div>
+        <div id="controls">
+            <div style="display: flex">
+                <button id="start-btn">Start</button>
+            </div>
+            <div>
+                <label>Št. korakov</label>
+                <input
+                    id="num_of_steps"
+                    type="number"
+                    name="num_of_steps"
+                    value="50"
+                />
+            </div>
+            <div>
+                <label>Št. celic v vrstici</label>
+                <input
+                    id="number_of_cells"
+                    type="number"
+                    name="number_of_cells"
+                    value="100"
+                />
+            </div>
+            <div>
+                <label>Pravilo</label>
+                <input id="ruleset" type="number" name="ruleset" value="90" />
+            </div>
+        </div>
+        <script src="layout.js"></script>
+        <script src="app.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>
